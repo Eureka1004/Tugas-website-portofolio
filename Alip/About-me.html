@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio - About me</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1.2s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-transition {
+      transition: all 0.5s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-link:hover {
+      color: yellow !important;
+      transition: 0.3s;
+    }
+
+    .section-toggle {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Navbar -->
+    <ul class="nav justify-content-center p-4 fade-in">
+      <li class="nav-item"><a class="nav-link text-white" href="Portofolio-Home.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="About-me.html">About me</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="Portofolio-portofolio.html">Portofolio</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="portofolio-contact.html">Contact</a></li>
+    </ul>
+
+    <!-- tentang saya -->
+    <div class="row mt-2 justify-content-center align-items-center p-3 rounded-5 fade-in" style="background-color: rgb(37, 37, 15);">
+      <div class="col-lg-10 d-flex flex-column flex-md-row align-items-center">
+          <img src="profil2.png" alt="profil" width="250" class="me-md-4 mb-3 mb-md-0 img-fluid rounded-3 shadow">
+        <div>
+          <h4 class="text-white">About me</h4>
+          <p class="text-white" style="text-align: justify;">
+            Kenalkan nama saya Yanuar Alif Ibrahim seorang Website Development. Saya adalah seorang mahasiswa yang sedang menempuh pendidikan S1 Teknik Informatika di Universitas Negeri Surabaya, saya suka sekali dengan teknologi salah satunya di dunia programing. 
+          </p>
+          <p class="text-white" style="text-align: justify;">
+            Menurut saya dunia programing selalu membuat saya penasaran dan menikmati proses dalam membuat suatu program (Kecuali tugas 🤣). Saya orang yang bertanggung jawab, suka tantangan dan sangat tertarik pada hal baru. Bisa bekerja dalam tim dan mudah bersosialisasi. Salam kenal 🙌
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- slide tombol skill -->
+    <div class="container mt-3 border-top border-warning pt-3">
+      <ul class="nav justify-content-center fade-in">
+        <li class="nav-item">
+          <span class="nav-link text-white section-toggle" onclick="showSection('skill')">Skill</span>
+        </li>
+        <li class="nav-item">
+          <span class="nav-link text-white section-toggle" onclick="showSection('tools')">Tools</span>
+        </li>
+      </ul>
+
+      <!-- Skill  -->
+      <div id="skill" class="container align-items-center py-3 fade-transition fade-in">
+        <div class="d-flex justify-content-center flex-wrap">
+          <button class="btn border-warning m-3 text-warning" style="width: 100px;">
+            <img src="logoC++.png" width="30" height="30"><br>C++
+          </button>
+          <button class="btn border-warning m-3 text-warning" style="width: 100px;">
+            <img src="logobootstrap.png" width="30" height="30"><br>Bootstrap
+          </button>
+          <button class="btn border-warning m-3 text-warning" style="width: 100px;">
+            <img src="logocss.png" width="30" height="30"><br>CSS
+          </button>
+          <button class="btn border-warning m-3 text-warning" style="width: 100px;">
+            <img src="logohtml.png" width="30" height="30"><br>HTML
+          </button>
+          <button class="btn border-warning m-3 text-warning" style="width: 100px;">
+            <img src="logojavascript.png" width="30" height="30"><br>JavaScript
+          </button>
+          <button class="btn border-warning m-3 text-warning" style="width: 100px;">
+            <img src="logophyton.png" width="30" height="30"><br>Python
+          </button>
+          <button class="btn border-warning m-3 text-warning" style="width: 100px;">
+            <img src="logopostgre.png" width="30" height="30"><br>PostgreSQL
+          </button>
+        </div>
+      </div>
+
+      <!-- Tools  -->
+      <div id="tools" class="container align-items-center py-3 fade-transition d-none">
+        <div class="d-flex justify-content-center flex-wrap">
+          <button class="btn border-warning m-3 text-warning" style="width: 100px;">
+            <img src="logoxampp.png" width="30" height="30"><br>Xampp
+          </button>
+          <button class="btn border-warning m-3 text-warning" style="width: 100px;">
+            <img src="logosublimetext.png" width="30" height="30"><br>Sublime Text
+          </button>
+          <button class="btn border-warning m-3 text-warning" style="width: 100px;">
+            <img src="logovscode.png" width="30" height="30"><br>VS Code
+          </button>
+          <button class="btn border-warning m-3 text-warning" style="width: 100px;">
+            <img src="logopostgre.png" width="30" height="30"><br>PostgreSQL
+          </button>
+          <button class="btn border-warning m-3 text-warning" style="width: 100px;">
+            <img src="logogithub.png" width="30" height="30"><br>Github
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showSection(section) {
+      const skill = document.getElementById('skill');
+      const tools = document.getElementById('tools');
+
+      if (section === 'skill') {
+        skill.classList.remove('d-none');
+        tools.classList.add('d-none');
+      } else {
+        skill.classList.add('d-none');
+        tools.classList.remove('d-none');
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

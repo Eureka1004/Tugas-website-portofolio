@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio - Portofolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: black;
+      color: white;
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card {
+      background-color: #1c1c1c;
+      color: white;
+      border: 1px solid #444;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(255, 255, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Navbar -->
+    <ul class="nav justify-content-center p-4">
+      <li class="nav-item"><a class="nav-link text-white" href="Portofolio-Home.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="About-me.html">About me</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="Portofolio-portofolio.html">Portofolio</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="portofolio-contact.html">Contact</a></li>
+    </ul>
+
+    <!-- kotak Protofolo -->
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+      <div class="card p-1 fade-in-up" style="width: 18rem; animation-delay: 0.2s;">
+        <img src="gambar-evotek.PNG" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5>Program Magang MBKM</h5>
+          <p class="card-text">
+            Pada saat semester 5 dan 6, saya mengikuti program Magang Bersertifikat MBKM di PT. Evolusi Teknologi Indonesia.
+          </p>
+        </div>
+      </div>
+
+      <div class="card p-1 fade-in-up" style="width: 18rem; animation-delay: 0.4s;">
+        <img src="gambar-website.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5>Pembuatan Website</h5>
+          <p class="card-text">
+            Saya dan teman-teman membuat berbagai website untuk tugas dari dosen selama masa kuliah.
+          </p>
+        </div>
+      </div>
+
+      <div class="card p-1 fade-in-up" style="width: 18rem; animation-delay: 0.6s;">
+        <img src="gambar-website-hotel.PNG" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5>Website Pemesanan Hotel</h5>
+          <p class="card-text">
+            Sebagai bagian dari trial dan pelatihan magang, saya membuat website pemesanan hotel.
+          </p>
+        </div>
+      </div>
+
+      <div class="card p-1 fade-in-up" style="width: 18rem; animation-delay: 0.8s;">
+        <img src="gambar-coding.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5>Berlatih dan Belajar</h5>
+          <p class="card-text">
+            Saya rutin berlatih membuat website untuk mengasah kreativitas dan skill pemrograman saya.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.fade-in-up');
+      cards.forEach((card, index) => {
+        card.style.animationDelay = `${0.2 + index * 0.2}s`;
+      });
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
